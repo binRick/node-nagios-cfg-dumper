@@ -18,7 +18,7 @@ const files = FileHound.create()
     .find();
 
 files.then(function(files) {
-
+files = [CACHE];
     async.map(files, function(file, _cb) {
         var R = {
             file: file,
@@ -26,8 +26,6 @@ files.then(function(files) {
             err: null,
         };
         try {
-            l(R);
-
             nagioscfg2json.fromFile(file, function(json) {
                 R.json = json;
                 _cb(null, R);
@@ -39,7 +37,9 @@ files.then(function(files) {
     }, function(errs, file_contents) {
         if (errs) throw errs;
 
-        l(file_contents);
+  //      l(JSON.stringify(file_contents));
+//        l(file_contents);
+        l(file_contents[0].json.command);
         process.exit();
 
     });
