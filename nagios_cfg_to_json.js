@@ -18,8 +18,6 @@ const files = FileHound.create()
     .find();
 
 files.then(function(files) {
-files = ['/etc/nagios/conf.d/vpnServers.cfg'];
-files = ['/etc/nagios/objects/commands.cfg'];
 
     async.map(files, function(file, _cb) {
         var R = {
@@ -28,7 +26,7 @@ files = ['/etc/nagios/objects/commands.cfg'];
             err: null,
         };
         try {
-l(R);
+            l(R);
 
             nagioscfg2json.fromFile(file, function(json) {
                 R.json = json;
@@ -43,8 +41,6 @@ l(R);
 
         l(file_contents);
         process.exit();
-
-
 
     });
 });
