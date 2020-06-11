@@ -12,6 +12,9 @@
   },
   "author": "",
   "license": "ISC",
+  "bin": {
+    "nagios_object_cache_to_json": "nagios_object_cache_to_json.js"
+  },
   "bugs": {
     "url": "https://github.com/binRick/node-nagios-cfg-dumper/issues"
   },
