@@ -1,0 +1,24 @@
+{
+  "name": "nagios-cfg-dumper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binRick/node-nagios-cfg-dumper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binRick/node-nagios-cfg-dumper/issues"
+  },
+  "homepage": "https://github.com/binRick/node-nagios-cfg-dumper#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "filehound": "^1.17.4",
+    "nagioscfg2json": "0.0.2"
+  }
+}
